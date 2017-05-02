@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.Arrays;
+
 /**
  * Created by chris on 3/7/2017.
  */
@@ -48,7 +50,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public Cursor getInformation(SQLiteDatabase db){
 
         Cursor cursor;// objects that retrieves information from the database
-        String[] projections = {USER_NAME,DATE,SCORE};
+        String[] projections = {USER_NAME,SCORE,DATE};
         String orderBy = SCORE+" DESC";
         String limit = "5";
         
@@ -56,6 +58,15 @@ public class DbHelper extends SQLiteOpenHelper {
         cursor = db.query(SCORE_TABLE_NAME,projections,null,null,null,null,orderBy,limit); // the nulls have to do with where clause info
 
         return cursor;
+    }
+
+    public void deleteInformation(String whereClause , String[] whereArgs, SQLiteDatabase db){
+
+
+        db.delete(SCORE_TABLE_NAME,whereClause,whereArgs);
+
+
+        Log.e(TAG,"One row is deleted with username: "+ Arrays.toString(whereArgs));
     }
 
 
@@ -66,3 +77,4 @@ public class DbHelper extends SQLiteOpenHelper {
 
     }
 }
+
