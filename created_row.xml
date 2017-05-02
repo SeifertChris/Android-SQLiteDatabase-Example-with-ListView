@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="UserName"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/username_txt"
+
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="Score"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/score_txt"
+
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="date"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/date_txt"
+
+        />
+
+</LinearLayout>
