@@ -57,12 +57,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(),"Fill In A Score",Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(getBaseContext(), "You have Entered: " + userNameparse, Toast.LENGTH_LONG).show();
-
+                    sendInformationToSQLDatabase();
                 }
 
-                sendInformationToSQLDatabase();
+
+
             }
         });
+
 
 
 
@@ -88,3 +90,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
